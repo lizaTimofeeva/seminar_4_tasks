@@ -5,12 +5,12 @@
 int Print (string text)
 {
     System.Console.Write(text);
-    return Math.Abs(Convert.ToInt32(Console.ReadLine()));
+    return (Convert.ToInt32(Console.ReadLine()));
 }
 
 int Degree (int A, int B)
 {
-    int sum = 0;
+    int sum = 1;
     for (int i = 0; i<B; i++)
     {
         sum *= A;
@@ -23,14 +23,14 @@ bool ValidateB (int B)
     if (B<0)
     {
         System.Console.WriteLine("Показатель не должен быть меньше нуля");
-        return false
+        return false;
     }
-    return true
+    return true;
 }
 
 int A = Print("Введите первое число: ");
 int B = Print("введите второе число: ");
 if (ValidateB(B))
 {
-    System.Console.WriteLine($"Число {A} в степени {B} равно {Degree (int A, int B)}");
+    System.Console.WriteLine($"Число {A} в степени {B} равно {Degree ( A,  B)}");
 }
